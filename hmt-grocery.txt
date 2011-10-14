@@ -1,0 +1,10 @@
+Item has many details through store
+Item has many users through list
+
+rails new hmt-grocery
+rails g scaffold Item name:string
+rails g scaffold Detail section:string
+rails g scaffold Store name:string item_id:integer detail_id:integer
+rails g scaffold List list:string item_id:integer user_id:integer
+
+rake db:migrate
