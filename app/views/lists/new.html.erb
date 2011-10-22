@@ -1,5 +1,7 @@
 <h1>New list</h1>
 
+<%= render :partial => 'store-form', :locals => {:store => Store.new }%>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', lists_path %>

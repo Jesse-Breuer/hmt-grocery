@@ -5,14 +5,16 @@
   <%= @store.name %>
 </p>
 
+<% if @store.item != nil %>
 <p>
   <b>Item:</b>
-  <%= @store.item_id %>
+  <%= @store.item.name %>
 </p>
+<% end %>
 
 <p>
   <b>Detail:</b>
-  <%= @store.detail_id %>
+  <%= @store.detail.section %>
 </p>
 
 
