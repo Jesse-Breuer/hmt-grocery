@@ -25,6 +25,7 @@ class StoresController < ApplicationController
   # GET /stores/new.json
   def new
     @store = Store.new
+    #@store.details.build
 
     respond_to do |format|
       format.html # new.html.erb

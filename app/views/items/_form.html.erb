@@ -15,6 +15,21 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
+ <div class="field">
+<%#= f.fields_for :stores do |g| %>
+      <%#= g.label :store %><br />
+      <%#= g.text_field :name %>
+<%# end %>
+  </div>
+
+ <div class="field">
+<%= f.fields_for :details do |g| %>
+      <%= g.label :section %><br />
+      <%= g.text_field :section %>
+<% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

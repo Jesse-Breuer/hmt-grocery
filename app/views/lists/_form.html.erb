@@ -28,7 +28,19 @@
   <%= f.fields_for :item do |g| %>
     <%= g.label :name %><br />
     <%= g.text_field :name %><br />
+
+<%# @list.item.build_store unless @list.item.store %>
+
+	<%#= g.fields_for :stores do |h| %>
+	      <%#= h.label :name %><br />
+	      <%#= h.text_field :name %>
+	<%# end %>
+
   <% end %>
+
+  <%#= f.fields_for :stores do |builder| %>
+    <%#= render "store_fields", :f => builder %>
+<%# end %>
 
   <div class="actions">
     <%= f.submit %>
