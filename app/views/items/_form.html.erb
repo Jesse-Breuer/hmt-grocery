@@ -12,9 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :item %><br />
     <%= f.text_field :name %>
   </div>
+
+ <%= f.fields_for :stores do |store_form| %>
+  <div class="field">
+    <%= store_form.label :store %><br />
+    <%= store_form.text_field :name %>
+  </div>
+
+  <%= store_form.fields_for :detail do |detail_form| %>
+  <div class="field">
+    <%= detail_form.label :section %><br />
+    <%= detail_form.text_field :section %>
+  </div>
+
+<% end %>
+<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
