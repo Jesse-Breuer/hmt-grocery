@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.stores.build.build_detail
+    #@item.stores.build
 
     respond_to do |format|
       format.html # new.html.erb
